@@ -1,0 +1,57 @@
+import javax.swing.JOptionPane;
+public class AdivinaElNumero {
+
+	/**
+	 Guess the number with graphical interface
+	 */
+	public static void main(String[] args) {
+		try {
+	
+		
+		int numero, aleatorio, counter = 0;
+		
+		aleatorio = (int)(Math.random() * 20);
+		 float pperimetro = 1;
+				 
+		do {
+		
+			numero = Integer.parseInt(JOptionPane.showInputDialog( "Try to gess the gessing number by entering a number"));
+		if (aleatorio > numero) {
+			JOptionPane.showMessageDialog(null,"Try a high number and do not forget to keep track of the adding and subtracting");
+
+
+		}
+		
+		else if (aleatorio < numero) {
+			
+			JOptionPane.showMessageDialog(null,"SnapS!! Try a number lower then the prior number you entered");
+		
+		
+		
+		}
+		
+		if (counter == pperimetro) {
+
+					JOptionPane.showMessageDialog(null,"You should take math 045");
+			 }
+		
+		
+		counter ++;
+	 
+		
+		} while (numero != aleatorio);
+		
+		
+		
+		JOptionPane.showMessageDialog(null,"\nFabulous!!!  \nyou gessed the number in  " +counter+ " attempts" +"\nGuessin gnumber is " +aleatorio+ "\nYou are a rocketstart!!!");
+		
+		} catch (Exception e) {
+			
+			 
+
+					JOptionPane.showMessageDialog(null,"Ouch this ERROR MESSAGE is generated becouse you enterd a letter " + "Please enter a number");
+			 }
+		}
+	
+
+	}
