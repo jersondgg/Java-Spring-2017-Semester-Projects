@@ -1,0 +1,57 @@
+/*
+ 
+ */
+package javaapplication44;
+
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author jerso
+ */
+public class JavaApplication44 {
+
+/**
+ * @param args the command line arguments
+ */
+public static void main(String[] args) {
+   
+		
+		String fah;
+		String cel;
+		double num1;
+		double num2;
+		double ceresult;
+		fah = JOptionPane.showInputDialog(null, "Enter temperature in Fahrenheit");
+		cel = JOptionPane.showInputDialog(null, "Enter temperature in Celsius");
+		
+		num1 = Integer.parseInt(fah);
+		num2 = Integer.parseInt(cel);
+
+		
+		double newcel = celcius(num1);
+	fa(num2);
+		JOptionPane.showMessageDialog(null, "Fahrenheit converted to celsius" + newcel );
+}
+     public static double celcius(double num1)
+	
+     {
+	double ceresult = (num1 - 32)* 5/9;
+	 
+	return ceresult;
+     }
+     
+     
+     public static void fa(double num1)
+ 	
+     {
+	double ceresult = (num1 * 9/5) + 32;
+	
+	JOptionPane.showMessageDialog(null, "celsius converted to Fahrenheit" + ceresult );
+     }
+     
+     
+     
+     
+     
+}
