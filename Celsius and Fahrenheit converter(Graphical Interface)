@@ -50,7 +50,7 @@ public static void main(String[] args) {
 	JOptionPane.showMessageDialog(null, "celsius converted to Fahrenheit" + ceresult );
      }
      
-     
+     ///1
      
      
      
