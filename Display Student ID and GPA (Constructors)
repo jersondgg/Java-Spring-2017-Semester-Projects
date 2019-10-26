@@ -1,0 +1,37 @@
+import java.util.Scanner;
+public class Student {
+	
+	private int stuNum ;
+	private double gpa;
+	public Student(int stuNum, double gpa){
+		
+		this.stuNum = stuNum;
+		this.gpa = gpa;
+	}
+	
+	public void showStudent()
+	{
+	
+		System.out.println(" Student ID : " + stuNum + " GPA :  " + gpa);
+	}
+     public void setStudent(int id, double grade){
+    	 this.stuNum = id;
+    	 this.gpa = grade;
+    }
+	public static void main(String[] args) {
+
+		int id = 0;
+		double gpa = 0.0;
+		Student stu = new Student (id, gpa);
+		Scanner input = new Scanner(System.in);
+		System.out.print("please enter student id");
+		id = input.nextInt();
+		System.out.println("please enter student gpa");
+		gpa = input.nextDouble();
+		//input.close();
+		stu.setStudent(id, gpa);
+		stu.showStudent();
+		
+	}
+
+}
