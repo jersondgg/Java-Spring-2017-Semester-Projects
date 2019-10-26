@@ -1,0 +1,50 @@
+import javax.swing.*;
+
+
+public class First {
+	public static void main (String[] args) {
+		String y;
+		String z, x;
+		int num1 ;
+		int num2 ;
+		int add;
+		int mult;
+		double div;
+		int subs;
+	    int mod;
+
+	    y = JOptionPane.showInputDialog(null, "Please input two numbers and I willoutput the result of multiple operation."
+       +"\n enter the first number ");
+	    z = JOptionPane.showInputDialog(null, "Please enter the second number ");
+	    
+	    
+	    
+		num1 = Integer.parseInt(y);
+		num2 = Integer.parseInt(z);
+		
+		add = num1 +num2;
+		mult = num1 * num2;
+		div = (double)num1 / (double)num2;
+		subs = num1 - num2;
+		mod = num1 % num2;
+		
+		final JDialog dialog = new JDialog();
+		dialog.setAlwaysOnTop(true);    
+		JOptionPane.showMessageDialog(dialog, "First number is "
+				+ num1
+				+ "\nSecond number is "
+				+ num2
+				+ "\nAddition is : " + add
+				+ "\nMultiplication is : " + mult
+				+ "\nDivision is : " + div
+				+ "\nSubstraction is : " + subs
+				+ "\nModule is : " + mod
+				
+				);
+		         
+		
+		
+		
+		
+	}
+}
