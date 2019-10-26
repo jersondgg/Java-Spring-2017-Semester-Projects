@@ -1,0 +1,110 @@
+/**
+ * 
+ */
+
+/**
+ * @author jerso
+ *
+ */
+import java.util.Scanner;
+public class Menu_shapes2 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args)
+	{
+		System.out.println("Select an option from below:" 
+        +"\n(1) Filled Triangle"
+        +"\n(2)  5 Star Shape"
+        +"\n(3) Vertical Rectangle"
+       +"\n(4) Bow Tie Shape"
+        +"\n(5) Exit"
+        +"Your logic pattern choice is this? ");
+        
+		Scanner inputDevice = new Scanner(System.in);
+		int option = inputDevice.nextInt();
+		
+		Scanner keyboard = new Scanner(System.in);
+		System.out.println("Please enter the size of stars from 1-50?");
+		
+		
+		
+		int number = keyboard.nextInt();
+		
+	switch (option)
+		{
+		case 1: 
+			Filled_Triangle(number);
+		break;
+		
+		case 2: 
+			filledStar_Shape(number);
+		break;
+			
+		case 3: 
+			filledvertical_rectangle(number);
+		break;
+		
+		case 4: 
+			filledBow_Tie(number);
+		break;
+		
+		default: 
+			System.out.println("Exit Program");
+			break;
+		}
+	}
+		
+	public static void Filled_Triangle(int number)
+	{
+		for (int i = 0; i < number; i++)
+		{
+			for (int k = 0; k < number - i; k++)
+		     {
+		        System.out.print(" ");
+		     }
+		     for (int j = 0; j < i * 2 + 1; j++)
+		     {
+		        System.out.print("*");
+		     }
+		     System.out.println("");
+		}
+	}
+	
+	public static void filledStar_Shape(int number)
+	{
+		
+	}
+	
+	public static void filledvertical_rectangle(int number)
+	{
+		for (int i =1; i <= number; i++) 
+		{
+            for (int j = -number; j <= number/2-number; j++) 
+            {
+            if (i+i <= j*j) 
+            	System.out.print("* ");
+            else            
+            	System.out.print("  ");
+            }
+            System.out.println();
+		}
+		}
+	
+	
+	public static void filledBow_Tie(int number)
+	{
+		for (int i = -number; i <= number; i++) 
+		{
+            for (int j = -number; j <= number; j++) 
+            {
+            if (i*i <= j*j) 
+            	System.out.print("* ");
+            else            
+            	System.out.print("  ");
+            }
+            System.out.println();
+		}
+	}
+}
