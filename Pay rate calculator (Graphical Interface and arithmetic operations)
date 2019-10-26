@@ -1,0 +1,45 @@
+
+
+
+import javax.swing.JOptionPane;
+import java.io.*;
+public class RateCal {
+
+	public static void main(String[] args) {
+		try
+		{
+		String fname,  id, horas;
+		
+	
+	   double payrate = 99.97, weekly, beweekly, monthly, htrabajadas;
+	   double  yearly;
+	   fname = JOptionPane.showInputDialog("Please enter your First name and Last name ");
+	   
+	   horas = JOptionPane.showInputDialog("Next enter the total of hours worked ");
+	id = JOptionPane.showInputDialog("Finally provide your personal Id Number ");
+		
+		
+		htrabajadas =Integer.parseInt(horas);
+		
+		
+		weekly =  htrabajadas * payrate; 
+		beweekly = weekly * 2;
+		monthly = weekly * 4.34524;
+		 yearly = weekly * 52.1349;
+		
+		JOptionPane.showMessageDialog(null,"\b Welcome back " + fname
+				+ "\nYour weekly payment is: " + weekly
+				+"\n Biweekly payment is: " + beweekly
+			    +"\nMonthly payment is: " + monthly
+				+"\nYearly payment is: " + yearly);
+		 
+		
+		}
+		catch(Exception e)
+		{
+			
+			JOptionPane.showMessageDialog(null, "Invalid entry, please try again"  );
+		}
+	}
+
+}
